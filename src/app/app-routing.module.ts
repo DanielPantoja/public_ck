@@ -17,7 +17,7 @@ import { AllChecksComponent } from './all-checks/all-checks.component';
 import { AllEntrysComponent } from './all-entrys/all-entrys.component';
 
 const routes: Routes = [
-  {path : '/', component: CheckTrackerComponent},
+  {path : '', component: CheckTrackerComponent},
   {path : '/login', component: LoginComponent},
   {path : '/signup', component: SignUpComponent},
   {path : '/home', component: HomeComponent,canActivate:[AuthGuard]},
