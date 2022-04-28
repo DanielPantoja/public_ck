@@ -17,24 +17,24 @@ import { AllChecksComponent } from './all-checks/all-checks.component';
 import { AllEntrysComponent } from './all-entrys/all-entrys.component';
 
 const routes: Routes = [
-  {path : 'CheckTracker', component: CheckTrackerComponent},
-  {path : 'CheckTracker/login', component: LoginComponent},
-  {path : 'CheckTracker/signup', component: SignUpComponent},
-  {path : 'CheckTracker/home', component: HomeComponent,canActivate:[AuthGuard]},
+  {path : '', component: CheckTrackerComponent},
+  {path : 'login', component: LoginComponent},
+  {path : 'signup', component: SignUpComponent},
+  {path : 'home', component: HomeComponent,canActivate:[AuthGuard]},
   //Forms
-  {path : 'CheckTracker/addJob', component: AddJobComponent, canActivate:[AuthGuard]},
-  {path : 'CheckTracker/addCheck/:jId', component: AddCheckComponent, canActivate:[AuthGuard]},
-  {path : 'CheckTracker/addEntry/:cId', component: AddEntryComponent, canActivate:[AuthGuard]},
+  {path : 'add-job', component: AddJobComponent, canActivate:[AuthGuard]},
+  {path : 'add-check/:jId', component: AddCheckComponent, canActivate:[AuthGuard]},
+  {path : 'add-entry/:cId', component: AddEntryComponent, canActivate:[AuthGuard]},
   //Displays
-  {path : 'CheckTracker/checks/:jId', component: ChecksComponent, canActivate:[AuthGuard]},
-  {path : 'CheckTracker/entrys/:cId', component: EntrysComponent , canActivate:[AuthGuard]},
-  {path : 'CheckTracker/allChecks', component: AllChecksComponent, canActivate:[AuthGuard]},
-  {path : 'CheckTracker/allEntrys', component: AllEntrysComponent, canActivate:[AuthGuard]},
+  {path : 'checks/:jId', component: ChecksComponent, canActivate:[AuthGuard]},
+  {path : 'entrys/:cId', component: EntrysComponent , canActivate:[AuthGuard]},
+  {path : 'all-checks', component: AllChecksComponent, canActivate:[AuthGuard]},
+  {path : 'all-entrys', component: AllEntrysComponent, canActivate:[AuthGuard]},
   //Edit Forms
-  {path : 'CheckTracker/jobEdit/:jId', component: EditJobComponent, canActivate:[AuthGuard]},
-  {path : "CheckTracker/checkEdit/:cId", component: EditCheckComponent, canActivate:[AuthGuard]},
-  {path : "CheckTracker/entryEdit/:eId", component: EditEntryComponent, canActivate:[AuthGuard]},
-  {path : '', pathMatch: "full", redirectTo: "/CheckTracker"}
+  {path : 'job-edit/:jId', component: EditJobComponent, canActivate:[AuthGuard]},
+  {path : "check-edit/:cId", component: EditCheckComponent, canActivate:[AuthGuard]},
+  {path : "entry-edit/:eId", component: EditEntryComponent, canActivate:[AuthGuard]},
+  {path : '', pathMatch: "full", redirectTo: "/"}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
