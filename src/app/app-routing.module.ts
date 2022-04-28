@@ -17,7 +17,7 @@ import { AllChecksComponent } from './all-checks/all-checks.component';
 import { AllEntrysComponent } from './all-entrys/all-entrys.component';
 
 const routes: Routes = [
-  {path : 'CheckTracker', component: CheckTrackerComponent},
+  {path : '', component: CheckTrackerComponent},
   {path : 'CheckTracker/login', component: LoginComponent},
   {path : 'CheckTracker/signup', component: SignUpComponent},
   {path : 'CheckTracker/home', component: HomeComponent,canActivate:[AuthGuard]},
@@ -34,7 +34,7 @@ const routes: Routes = [
   {path : 'CheckTracker/job-edit/:jId', component: EditJobComponent, canActivate:[AuthGuard]},
   {path : 'CheckTracker/check-edit/:cId', component: EditCheckComponent, canActivate:[AuthGuard]},
   {path : 'CheckTracker/entry-edit/:eId', component: EditEntryComponent, canActivate:[AuthGuard]},
-  {path : '', pathMatch: "full", redirectTo: "/CheckTracker"}
+  {path : '', pathMatch: "full", redirectTo: '/'}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
