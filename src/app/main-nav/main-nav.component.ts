@@ -34,24 +34,24 @@ export class MainNavComponent implements OnInit, OnDestroy {
     this.authListenerSubs.unsubscribe();//idk if this works tbh
   }
   onLogin(){
-    this.router.navigate(['/CheckTracker/login'])
+    this.router.navigate(['/login'])
   }
   onSignUp(){
-    this.router.navigate(['/CheckTracker/signup'])
+    this.router.navigate(['/signup'])
   }
   onLogOut() {
     this.dialog.open(ValidatorComponent, {data: {title: 'Logging Out?',message: 'Are you sure you want to log out?'}})
   }
   onAddJob() {
-    this.router.navigate(['/CheckTracker/addJob'])
+    this.router.navigate(['/add-job'])
   }
   onGetJobs(){
-    this.router.navigate(['/CheckTracker/home'])
+    this.router.navigate(['/home'])
   }
   onGetChecks() {
-    this.router.navigate(['/CheckTracker/allChecks'])
+    this.router.navigate(['/all-checks'])
   }
   onGetEntrys() {
-    this.router.navigate(['/CheckTracker/allEntrys'])
+    this.router.navigate(['/all-entrys'])
   }
 }

@@ -32,11 +32,11 @@
           <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
           <div class="dropdown-menu">
             <div class="dropdown-menu-row">
-              <a class="btn btn-outline-warning my-2 my-sm-0"[routerLink]="['/CheckTracker/entrys',c.id]">Entrys</a>
-              <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/CheckTracker/addEntry',c.id]">Add Entry</a>
+              <a class="btn btn-outline-warning my-2 my-sm-0"[routerLink]="['/entrys',c.id]">Entrys</a>
+              <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/add-entry',c.id]">Add Entry</a>
             </div>
             <div class="dropdown-menu-row">
-              <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/CheckTracker/checkEdit',c.id]">Edit</a>
+              <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/check-edit',c.id]">Edit</a>
               <a class="btn btn-outline-warning my-2 my-sm-0" (click)='onDeleteCheck(c.id, c.jobId)'>Delete</a>
             </div>
           </div>
@@ -55,11 +55,11 @@
       <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
       <div class="dropdown-menu">
         <div class="dropdown-menu-row">
-          <a class="btn btn-outline-warning my-2 my-sm-0"[routerLink]="['/CheckTracker/entrys',c.id]">Entrys</a>
-          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/CheckTracker/addEntry',c.id]">Add Entry</a>
+          <a class="btn btn-outline-warning my-2 my-sm-0"[routerLink]="['/entrys',c.id]">Entrys</a>
+          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/add-entry',c.id]">Add Entry</a>
         </div>
         <div class="dropdown-menu-row">
-          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/CheckTracker/checkEdit',c.id]">Edit</a>
+          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/check-edit',c.id]">Edit</a>
           <a class="btn btn-outline-warning my-2 my-sm-0" (click)='onDeleteCheck(c.id, c.jobId)'>Delete</a>
         </div>
       </div>

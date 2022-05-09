@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+
 //Components
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -33,6 +34,7 @@ import { EditCheckComponent } from './edit-check/edit-check.component';
 import { EditEntryComponent } from './edit-entry/edit-entry.component';
 import { ErrorComponent } from './error/error.component';
 import { ValidatorComponent } from './validator/validator.component';
+import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -70,8 +72,9 @@ import { ValidatorComponent } from './validator/validator.component';
     MatListModule,
   ],
   providers: [
-    HttpService, { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },//idk why i have the service at the beginnning tbh
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    HttpService, 
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
   entryComponents:[ErrorComponent]

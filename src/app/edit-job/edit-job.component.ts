@@ -57,7 +57,7 @@ export class EditJobComponent implements OnInit {
     let obs = this.httpService.updateOneJob(uId, jId, this.updatedJob)
     obs.subscribe(data => {
       if(data['results']){
-        this.router.navigate(['/CheckTracker/home'])
+        this.router.navigate(['/home'])
       }
     })
   }

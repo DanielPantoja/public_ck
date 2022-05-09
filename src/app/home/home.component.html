@@ -29,11 +29,11 @@
           <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split"data-toggle="dropdown"></button>
           <div class="dropdown-menu">
             <div class="dropdown-menu-row">
-              <a class="btn btn-outline-warning my-2 my-sm-0"[routerLink]="['/CheckTracker/checks/',j.id]">Information</a>
-              <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/CheckTracker/addCheck',j.id]">Add Check</a>
+              <a class="btn btn-outline-warning my-2 my-sm-0"[routerLink]="['/checks/',j.id]">Information</a>
+              <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/add-check',j.id]">Add Check</a>
             </div>
             <div class="dropdown-menu-row">
-              <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/CheckTracker/jobEdit',j.id]">Edit</a>
+              <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/job-edit',j.id]">Edit</a>
               <a class="btn btn-outline-warning my-2 my-sm-0" (click)='onDeleteJob(j.id)'>Delete</a>
             </div>
           </div>
@@ -52,11 +52,11 @@
       <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
       <div class="dropdown-menu">
         <div class="dropdown-menu-row">
-          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/CheckTracker/checks/',j.id]">Information</a>
-          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/CheckTracker/addCheck/',j.id]">Add Check</a>
+          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/checks/',j.id]">Information</a>
+          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/add-check/',j.id]">Add Check</a>
         </div>
         <div class="dropdown-menu-row">
-          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/CheckTracker/jobEdit/',j.id]">Edit</a>
+          <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/job-edit/',j.id]">Edit</a>
           <a class="btn btn-outline-warning my-2 my-sm-0" (click)='onDeleteJob(j.id)'>Delete</a>
         </div>
       </div>

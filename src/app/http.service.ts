@@ -72,7 +72,7 @@ export class HttpService {
           const now = new Date();
           const expirationDate = new Date(now.getTime() + expiresInDuration * 1000);
           this.saveAuthData(token, expirationDate, response.userId);
-          this._router.navigate(['/CheckTracker/home']);
+          this._router.navigate(['/home']);
         }
       })
   }
@@ -91,7 +91,7 @@ export class HttpService {
           const now = new Date();
           const expirationDate = new Date(now.getTime() + expiresInDuration * 1000);
           this.saveAuthData(token, expirationDate, response.userId);
-          this._router.navigate(["/CheckTracker/home"]);
+          this._router.navigate(["/home"]);
         }
       },
         error => {
@@ -114,7 +114,7 @@ export class HttpService {
     const jobData = { title: title, payrate: payrate, taxrate: taxrate, uId: uId };
     this._http.post('/api/job/create', jobData).subscribe(
       () => {
-        this._router.navigate(['/CheckTracker/home']);
+        this._router.navigate(['/home']);
       }
     )
   }
@@ -122,7 +122,7 @@ export class HttpService {
     const checkData = { start: start, end: end, jobId: jId };
     this._http.post('/api/check/create', checkData).subscribe(
       () => {
-        this._router.navigate(['/CheckTracker/checks/',jId]);
+        this._router.navigate(['/checks/',jId]);
       }
     )
   }
@@ -131,7 +131,7 @@ export class HttpService {
     this._http.post('/api/entry/create', entryData).subscribe(
       response => {
         let jId = response['jId']
-        this._router.navigate(['/CheckTracker/checks/',jId]);
+        this._router.navigate(['/checks/',jId]);
       }
     )
   }
